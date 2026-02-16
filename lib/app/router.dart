@@ -1,17 +1,26 @@
-import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'routes.dart';
+
 import '../features/auth/screens/login_screen.dart';
+import '../features/student/student_dashboard.dart';
+import '../features/teacher/dashboard/teacher_dashboard.dart';
 
 class AppRouter {
-  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case '/login':
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
-      default:
-        return MaterialPageRoute(
-          builder: (_) => const Scaffold(
-            body: Center(child: Text('404')),
-          ),
-        );
-    }
-  }
+  static final router = GoRouter(
+    initialLocation: AppRoutes.login,
+    routes: [
+      GoRoute(
+        path: AppRoutes.login,
+        builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.teacherDashboard,
+        builder: (context, state) => const TeacherDashboard(),
+      ),
+      GoRoute(
+        path: AppRoutes.studentDashboard,
+        builder: (context, state) => const StudentDashboard(),
+      ),
+    ],
+  );
 }
