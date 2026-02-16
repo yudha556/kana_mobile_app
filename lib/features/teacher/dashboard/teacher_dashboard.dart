@@ -24,36 +24,27 @@ class TeacherDashboard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SvgPicture.asset(
-                  'assets/images/logo1.svg',
-                  height: 30,
-                ),
+                SvgPicture.asset('assets/images/logo1.svg', height: 30),
                 const SizedBox(width: 8),
                 const Text(
                   "KANA",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                )
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Icon(
-                  LucideIcons.user,
-                  size: 28,
-                ),
+                Icon(LucideIcons.user, size: 28),
                 const SizedBox(width: 8),
                 const Text(
                   "Yudhaa",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(width: 4),
-                Icon(
-                  LucideIcons.chevronDown,
-                  size: 20,
-                )
+                Icon(LucideIcons.chevronDown, size: 20),
               ],
-            )
+            ),
           ],
         ),
       ),
@@ -186,16 +177,12 @@ class _UploadSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Icon(
-              LucideIcons.plus,
-              size: 30,
-              color: Colors.primaries[5],
-            ),
+            Icon(LucideIcons.plus, size: 30, color: Colors.primaries[5]),
             const SizedBox(width: 8),
             const Text(
               "Upload New Material",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-            )
+            ),
           ],
         ),
         const SizedBox(height: 16),
