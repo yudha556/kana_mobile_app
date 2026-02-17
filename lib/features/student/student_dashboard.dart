@@ -7,7 +7,7 @@ class StudentDashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Student Dashboard')),
-      body: const Center(child: Text('Welcome to the Student Dashboard!')),
+      body: const Center(child: Text('INi nanti halaman student bang')),
     );
   }
 }
