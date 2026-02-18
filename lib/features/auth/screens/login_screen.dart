@@ -8,10 +8,18 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Pakai resizeToAvoidBottomInset biar card-nya naik pas keyboard muncul
+      resizeToAvoidBottomInset: true, 
       body: Stack(
-        children: const [
-          AnimatedBackground(),
-          Center(child: LoginCard()),
+        children: [
+          const AnimatedBackground(),
+          Center(
+            child: Padding(
+              // Ngasih jarak 24 pixel di kanan dan kiri
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: const LoginCard(),
+            ),
+          ),
         ],
       ),
     );
