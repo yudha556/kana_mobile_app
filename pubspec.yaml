@@ -40,6 +40,8 @@ dependencies:
   lucide_icons: ^0.257.0
   camera: ^0.11.0+1
   permission_handler:  ^10.4.0
+  image_picker: ^1.0.7
+  file_picker: ^6.1.1
 
 dev_dependencies:
   flutter_test:

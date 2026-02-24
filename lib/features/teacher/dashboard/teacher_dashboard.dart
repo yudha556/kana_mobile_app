@@ -7,6 +7,8 @@ import 'package:kana_mobile_app/core/ui/card/app_card.dart';
 import 'package:kana_mobile_app/core/ui/upload/file_upload_area.dart';
 import 'package:kana_mobile_app/core/ui/upload/upload_types.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import '../../../app/routes.dart';
 
 class TeacherDashboard extends StatelessWidget {
   const TeacherDashboard({super.key});
@@ -131,14 +133,14 @@ class _DashboardActions extends StatelessWidget {
       child: isMobile
           ? Column(
               children: [
-                _uploadBtn(),
+                _uploadBtn(context),
                 const SizedBox(height: 12),
                 _generateBtn(),
               ],
             )
           : Row(
               children: [
-                Expanded(child: _uploadBtn()),
+                Expanded(child: _uploadBtn(context)),
                 const SizedBox(width: 12),
                 Expanded(child: _generateBtn()),
               ],
@@ -146,12 +148,14 @@ class _DashboardActions extends StatelessWidget {
     );
   }
 
-  Widget _uploadBtn() {
+  Widget _uploadBtn(BuildContext context) {
     return AppButton(
       label: "Manage Student",
       icon: LucideIcons.users,
       fullWidth: true,
-      onPressed: () {},
+      onPressed: () {
+      context.push(AppRoutes.manageStudent);
+    },
     );
   }
 
