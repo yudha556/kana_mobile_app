@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:kana_mobile_app/features/teacher/manageStudent/data/student_stats.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:kana_mobile_app/core/ui/button/app_button.dart';
 import './widget/stat_card.dart';
-import './data/student_stats.dart';
 import './widget/add_student_dialog.dart';
 
 class ManageStudentPage extends StatelessWidget {
