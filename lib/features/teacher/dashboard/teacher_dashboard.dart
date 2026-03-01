@@ -135,14 +135,14 @@ class _DashboardActions extends StatelessWidget {
               children: [
                 _uploadBtn(context),
                 const SizedBox(height: 12),
-                _generateBtn(),
+                _generateBtn(context),
               ],
             )
           : Row(
               children: [
                 Expanded(child: _uploadBtn(context)),
                 const SizedBox(width: 12),
-                Expanded(child: _generateBtn()),
+                Expanded(child: _generateBtn(context)),
               ],
             ),
     );
@@ -154,18 +154,20 @@ class _DashboardActions extends StatelessWidget {
       icon: LucideIcons.users,
       fullWidth: true,
       onPressed: () {
-      context.push(AppRoutes.manageStudent);
-    },
+        context.push(AppRoutes.manageStudent);
+      },
     );
   }
 
-  Widget _generateBtn() {
+  Widget _generateBtn(BuildContext context) {
     return AppButton(
       label: "View All Deck",
       variant: AppButtonVariant.secondary,
       icon: LucideIcons.bookOpen,
       fullWidth: true,
-      onPressed: () {},
+      onPressed: () {
+        context.push(AppRoutes.deckPage);
+      },
     );
   }
 }

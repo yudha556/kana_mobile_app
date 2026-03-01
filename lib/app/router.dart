@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'routes.dart';
 
@@ -5,6 +6,7 @@ import '../features/auth/screens/login_screen.dart';
 import '../features/student/student_dashboard.dart';
 import '../features/teacher/dashboard/teacher_dashboard.dart';
 import '../features/teacher/manageStudent/manageStudent_page.dart';
+import '../features/teacher/deck/deck_page.dart';
 
 class AppRouter {
   static final router = GoRouter(
@@ -26,6 +28,10 @@ class AppRouter {
         path: AppRoutes.manageStudent,
         builder: (context, state) => const ManageStudentPage(),
       ),
+      GoRoute(
+        path: AppRoutes.deckPage,
+        builder: (context, State) => const DeckPage()
+      )
     ],
   );
 }

@@ -3,4 +3,5 @@ class AppRoutes {
   static const teacherDashboard = '/teacher';
   static const studentDashboard = '/student';
   static const manageStudent = '/manageStudent';
+  static const deckPage = '/deck';
 }
